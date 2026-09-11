@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nuko Quick! — a cute pixel reaction-time game.">
+  <title>Nuko Quick! ★ Reaction Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#game" aria-label="Nuko Quick home"><span>N</span>uko <b>Quick!</b></a>
+    <div class="search" aria-hidden="true">
+      <span>Search Nuko</span><button type="button" tabindex="-1">Search</button>
+    </div>
+    <p>★ online since 2004</p>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Game menu">
+      <a class="compose" href="#game">Start Game</a>
+      <nav>
+        <a href="#game"><strong>Inbox (2)</strong></a>
+        <a class="active" href="#game">Nuko Quick! ★</a>
+        <a href="#scores">Best Score</a>
+        <a href="#help">How to Play</a>
+      </nav>
+
+      <section class="side-box">
+        <h2>— Nuko status</h2>
+        <p><i class="dot"></i> online</p>
+        <p>mood: ready!</p>
+      </section>
+
+      <section class="side-box counter">
+        <h2>— Visitors</h2>
+        <p>001337</p>
+      </section>
+    </aside>
+
+    <main id="game" class="main-panel">
+      <div class="newsbar">
+        <span>Nuko Quick! — test your cat-like reflexes</span>
+        <span aria-hidden="true">‹ ›</span>
+      </div>
+
+      <section class="welcome">
+        <div class="avatar" aria-hidden="true">★</div>
+        <div>
+          <h1>NUKO QUICK!</h1>
+          <p>Wait for Nuko to change, then click as fast as you can.</p>
+        </div>
+      </section>
+
+      <section id="scores" class="score-row" aria-label="Reaction scores">
+        <p>LAST: <strong id="lastScore">--</strong></p>
+        <p>BEST: <strong id="bestScore">--</strong></p>
+      </section>
+
+      <section class="post game-post">
+        <header>
+          <strong>Nuko Reaction Test</strong>
+          <span id="postTime">ready now</span>
+        </header>
+
+        <div
+          id="gameArea"
+          class="game-area"
+          role="button"
+          tabindex="0"
+          aria-describedby="help"
+        >
+          <p id="status" class="status" aria-live="polite">READY?</p>
+          <img id="nukoImage" src="nuko-waiting.gif" alt="Three little pixel cats waiting">
+          <div class="result" aria-live="polite">
+            <strong id="seconds">0.00 s</strong>
+            <span id="milliseconds">Reaction time appears here</span>
+          </div>
+        </div>
+
+        <footer class="post-actions">
+          <span>☆ Favorite</span><span>♡ Like</span><span>✉ Email</span>
+        </footer>
+      </section>
+
+      <button id="startButton" class="start-button" type="button">★ START ★</button>
+
+      <section id="help" class="post help-post">
+        <header><strong>How to play</strong><span>3 steps</span></header>
+        <ol>
+          <li>Press START.</li>
+          <li>Wait while the first Nuko GIF is showing.</li>
+          <li>Click when the center GIF changes. Clicking early is a false start!</li>
+        </ol>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
